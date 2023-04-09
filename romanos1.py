@@ -29,6 +29,19 @@ def to_roman(decimal):
     return numero_romano
 
 
+def to_decimal(romanos):
+    diccionario = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    decimal_num = 0
+    for i in range(len(romanos)):
+        if i > 0 and diccionario[romanos[i]] > diccionario[romanos[i-1]]:
+            decimal_num += diccionario[romanos[i]] - 2 * diccionario[romanos[i-1]]
+        else:
+            decimal_num += diccionario[romanos[i]]
+    return decimal_num
+
+
+
 if __name__ == "__main__":
     print(to_roman(75))
+    print(to_decimal("MCI"))
  

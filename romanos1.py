@@ -42,6 +42,6 @@ def to_decimal(romanos):
 
 
 if __name__ == "__main__":
-    print(to_roman(75))
-    print(to_decimal("MCI"))
- 
+    
+   print(to_roman(75))
+   print(to_decimal("MCI"))
